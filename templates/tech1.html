@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيرة ذاتية - قالب تقني</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Courier New', monospace; line-height: 1.6; color: #0f172a; background: #0f172a; }
+        .container { max-width: 900px; margin: 20px auto; background: #1e293b; border: 2px solid #10b981; border-radius: 10px; overflow: hidden; }
+        .terminal-header { background: #374151; padding: 10px 20px; display: flex; align-items: center; gap: 10px; }
+        .terminal-buttons { display: flex; gap: 8px; }
+        .terminal-button { width: 12px; height: 12px; border-radius: 50%; }
+        .close { background: #ef4444; }
+        .minimize { background: #f59e0b; }
+        .maximize { background: #10b981; }
+        .terminal-title { color: #e5e7eb; margin-right: 15px; font-size: 0.9em; }
+        .header { background: #1e293b; color: #10b981; padding: 30px; border-bottom: 1px solid #374151; }
+        .prompt { color: #10b981; }
+        .name { font-size: 2.2em; color: #ffffff; margin: 10px 0; }
+        .title { color: #64748b; font-size: 1.1em; }
+        .contact { margin-top: 15px; }
+        .contact-line { color: #64748b; margin: 5px 0; }
+        .contact-line .value { color: #10b981; }
+        .content { padding: 30px; background: #1e293b; color: #e5e7eb; }
+        .section { margin-bottom: 30px; }
+        .section-title { color: #10b981; font-size: 1.3em; margin-bottom: 15px; }
+        .section-title::before { content: '$ '; color: #10b981; }
+        .command-line { background: #0f172a; padding: 15px; border-radius: 5px; margin-bottom: 15px; border-left: 3px solid #10b981; }
+        .command-prompt { color: #10b981; }
+        .command-output { color: #e5e7eb; margin-top: 8px; }
+        .item { margin-bottom: 20px; }
+        .item-title { color: #ffffff; font-weight: bold; margin-bottom: 5px; }
+        .item-subtitle { color: #64748b; font-size: 0.9em; margin-bottom: 8px; }
+        .item-description { color: #cbd5e1; line-height: 1.6; }
+        .code-block { background: #0f172a; padding: 10px; border-radius: 3px; font-family: 'Courier New', monospace; color: #10b981; margin: 10px 0; }
+        .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .skill-item { background: #0f172a; padding: 15px; border-radius: 5px; border: 1px solid #374151; }
+        .skill-name { color: #10b981; font-weight: bold; }
+        .skill-level { color: #64748b; font-size: 0.9em; }
+        .progress-bar { width: 100%; height: 4px; background: #374151; border-radius: 2px; margin-top: 8px; overflow: hidden; }
+        .progress-fill { height: 100%; background: linear-gradient(90deg, #10b981, #059669); border-radius: 2px; }
+        @media print { body { background: white; color: black; } .container { border: 1px solid black; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <div class="terminal-button close"></div>
+                <div class="terminal-button minimize"></div>
+                <div class="terminal-button maximize"></div>
+            </div>
+            <div class="terminal-title">resume.sh - Terminal</div>
+        </div>
+        
+        <div class="header">
+            <div class="command-line">
+                <div class="command-prompt">user@system:~$ cat profile.txt</div>
+                <div class="command-output">
+                    <h1 class="name">{{name}}</h1>
+                    <p class="title">{{title}}</p>
+                </div>
+            </div>
+            
+            <div class="contact">
+                <div class="contact-line"><span class="prompt">email:</span> <span class="value">{{email}}</span></div>
+                <div class="contact-line"><span class="prompt">phone:</span> <span class="value">{{phone}}</span></div>
+                <div class="contact-line"><span class="prompt">location:</span> <span class="value">{{location}}</span></div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <h2 class="section-title">cat summary.md</h2>
+                <div class="command-line">
+                    <div class="command-output">{{summary}}</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">ls -la experience/</h2>
+                {{#experience}}
+                <div class="item">
+                    <div class="command-line">
+                        <div class="command-prompt">./{{company}}.sh --position="{{title}}"</div>
+                        <div class="command-output">
+                            <div class="item-title">{{title}}</div>
+                            <div class="item-subtitle">{{company}} | {{location}} | {{startDate}} - {{endDate}}</div>
+                            <div class="item-description">{{description}}</div>
+                        </div>
+                    </div>
+                </div>
+                {{/experience}}
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">cat education.log</h2>
+                {{#education}}
+                <div class="item">
+                    <div class="command-line">
+                        <div class="command-output">
+                            <div class="item-title">{{degree}}</div>
+                            <div class="item-subtitle">{{school}} | {{location}} | {{startDate}} - {{endDate}}</div>
+                            <div class="item-description">{{description}}</div>
+                        </div>
+                    </div>
+                </div>
+                {{/education}}
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">./skills --list</h2>
+                <div class="skill-grid">
+                    {{#skills}}
+                    <div class="skill-item">
+                        <div class="skill-name">{{name}}</div>
+                        <div class="skill-level">Level: {{level}}</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    {{/skills}}
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2 class="section-title">locale -a</h2>
+                <div class="command-line">
+                    <div class="command-output">
+                        {{#languages}}
+                        <div>{{name}} - {{level}}</div>
+                        {{/languages}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

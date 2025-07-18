@@ -1,44 +1,133 @@
 [
   {
-    "id": "academic1",
-    "name": "Academic1",
-    "thumbnail": "/templates/thumbnails/academic1.png",
-    "file": "/templates/academic1.html",
-    "category": "academic"
+    "id": "modern1",
+    "name": "Modern 1",
+    "category": "modern",
+    "description": "قالب حديث وعصري مع تصميم نظيف",
+    "thumbnail": "thumbnails/modern1.png",
+    "file": "modern1.html",
+    "isPremium": false,
+    "rating": 4.5
+  },
+  {
+    "id": "modern2",
+    "name": "Modern 2",
+    "category": "modern",
+    "description": "قالب حديث مع خلفية متدرجة وتصميم أنيق",
+    "thumbnail": "thumbnails/modern2.png",
+    "file": "modern2.html",
+    "isPremium": false,
+    "rating": 4.7
   },
   {
     "id": "classic1",
-    "name": "Classic1",
-    "thumbnail": "/templates/thumbnails/classic1.png",
-    "file": "/templates/classic1.html",
-    "category": "classic"
-  },
-  {
-    "id": "creative1",
-    "name": "Creative1",
-    "thumbnail": "/templates/thumbnails/creative1.png",
-    "file": "/templates/creative1.html",
-    "category": "creative"
+    "name": "Classic 1",
+    "category": "classic",
+    "description": "قالب كلاسيكي أنيق ومهني",
+    "thumbnail": "thumbnails/classic1.png",
+    "file": "classic1.html",
+    "isPremium": false,
+    "rating": 4.3
   },
   {
     "id": "minimalist1",
-    "name": "Minimalist1",
-    "thumbnail": "/templates/thumbnails/minimalist1.png",
-    "file": "/templates/minimalist1.html",
-    "category": "minimalist"
+    "name": "Minimalist 1",
+    "category": "minimalist",
+    "description": "قالب بسيط ونظيف للمحترفين",
+    "thumbnail": "thumbnails/minimalist1.png",
+    "file": "minimalist1.html",
+    "isPremium": false,
+    "rating": 4.6
   },
   {
-    "id": "modern1",
-    "name": "Modern1",
-    "thumbnail": "/templates/thumbnails/modern1.png",
-    "file": "/templates/modern1.html",
-    "category": "modern"
+    "id": "creative1",
+    "name": "Creative 1",
+    "category": "creative",
+    "description": "قالب إبداعي ملون للمصممين",
+    "thumbnail": "thumbnails/creative1.png",
+    "file": "creative1.html",
+    "isPremium": false,
+    "rating": 4.4
   },
   {
     "id": "professional1",
-    "name": "Professional1",
-    "thumbnail": "/templates/thumbnails/professional1.png",
-    "file": "/templates/professional1.html",
-    "category": "professional"
+    "name": "Professional 1",
+    "category": "professional",
+    "description": "قالب مهني متقدم للمناصب العليا",
+    "thumbnail": "thumbnails/professional1.png",
+    "file": "professional1.html",
+    "isPremium": false,
+    "rating": 4.8
+  },
+  {
+    "id": "academic1",
+    "name": "Academic 1",
+    "category": "academic",
+    "description": "قالب أكاديمي رسمي للباحثين",
+    "thumbnail": "thumbnails/academic1.png",
+    "file": "academic1.html",
+    "isPremium": false,
+    "rating": 4.2
+  },
+  {
+    "id": "executive1",
+    "name": "Executive 1",
+    "category": "executive",
+    "description": "قالب تنفيذي فاخر للمدراء التنفيذيين",
+    "thumbnail": "thumbnails/executive1.png",
+    "file": "executive1.html",
+    "isPremium": true,
+    "rating": 4.9
+  },
+  {
+    "id": "tech1",
+    "name": "Tech 1",
+    "category": "tech",
+    "description": "قالب تقني بأسلوب Terminal للمطورين",
+    "thumbnail": "thumbnails/tech1.png",
+    "file": "tech1.html",
+    "isPremium": false,
+    "rating": 4.7
+  },
+  {
+    "id": "elegant1",
+    "name": "Elegant 1",
+    "category": "elegant",
+    "description": "قالب أنيق وراقي مع عناصر زخرفية",
+    "thumbnail": "thumbnails/elegant1.png",
+    "file": "elegant1.html",
+    "isPremium": true,
+    "rating": 4.8
+  },
+  {
+    "id": "colorful1",
+    "name": "Colorful 1",
+    "category": "colorful",
+    "description": "قالب ملون ومبهج للمجالات الإبداعية",
+    "thumbnail": "thumbnails/colorful1.png",
+    "file": "colorful1.html",
+    "isPremium": false,
+    "rating": 4.5
+  },
+  {
+    "id": "simple1",
+    "name": "Simple 1",
+    "category": "simple",
+    "description": "قالب بسيط جداً وسهل القراءة",
+    "thumbnail": "thumbnails/simple1.png",
+    "file": "simple1.html",
+    "isPremium": false,
+    "rating": 4.1
+  },
+  {
+    "id": "corporate1",
+    "name": "Corporate 1",
+    "category": "corporate",
+    "description": "قالب مؤسسي احترافي للشركات الكبرى",
+    "thumbnail": "thumbnails/corporate1.png",
+    "file": "corporate1.html",
+    "isPremium": true,
+    "rating": 4.6
   }
 ]
+
